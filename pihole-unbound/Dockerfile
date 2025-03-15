@@ -8,5 +8,9 @@ COPY 99-edns.conf /etc/dnsmasq.d/99-edns.conf
 RUN mkdir -p /etc/services.d/unbound
 COPY unbound-run /etc/services.d/unbound/run
 
-ENTRYPOINT ["start.sh"]
+# Copy and set up the custom entrypoint
+COPY custom-entrypoint.sh /custom-entrypoint.sh
+RUN chmod +x /custom-entrypoint.sh
+
+ENTRYPOINT ["/custom-entrypoint.sh"]
 
