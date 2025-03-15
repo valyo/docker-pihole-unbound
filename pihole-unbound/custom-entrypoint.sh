@@ -20,4 +20,4 @@ else
 fi
 
 # Call the original start.sh
-exec /start.sh
+exec /usr/bin/start.sh
