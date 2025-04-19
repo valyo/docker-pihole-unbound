@@ -5,7 +5,7 @@ _Forked from [chriscrowe/docker-pihole-unbound](https://github.com/chriscrowe/do
 
 This repo runs Pi-Hole and Unbound in one container. 
 - This configuration contacts the DNS root servers directly, please read the Pi-Hole docs on [Pi-hole as All-Around DNS Solution](https://docs.pi-hole.net/guides/unbound/) to understand what this means.
-- With this approach, we can also simplify our Docker networking since `macvlan` is no longer necessary.
+- With this approach, `macvlan` should no longer be necessary, but I prefer running Pi-Hole with its own IP address.
 
 ## Description
 
